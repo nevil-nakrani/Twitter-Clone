@@ -22,7 +22,7 @@ export const prtectedRoute = async(req, res, next)=>{
         req.user = userGet;
         next();
     } catch (error) {
-        console.log("Error in protected rote", error.messege)
+        // console.log("Error in protected rote", error.messege)
         return res.status(500).json({error:"Internal Server Error"})
     }
 
